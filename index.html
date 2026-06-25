@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .game-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .game-icon {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .game-info {
+            padding: 20px;
+        }
+
+        .game-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .game-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .play-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .game-card:hover .play-btn {
+            opacity: 0.9;
+        }
+
+        /* Different colors for different games */
+        .game-card:nth-child(1) .game-icon {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        }
+        .game-card:nth-child(2) .game-icon {
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+        }
+        .game-card:nth-child(3) .game-icon {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+        .game-card:nth-child(4) .game-icon {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+        }
+        .game-card:nth-child(5) .game-icon {
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Game Hub</h1>
+        <p class="subtitle">Choose a game and start playing!</p>
+        
+        <div class="games-grid">
+            <a href="subway-surfers.html" class="game-card">
+                <div class="game-icon">🏃</div>
+                <div class="game-info">
+                    <div class="game-title">Subway Surfers</div>
+                    <div class="game-description">Run, dodge, and collect coins in this endless runner game!</div>
+                    <button class="play-btn">Play Now</button>
+                </div>
+            </a>
+
+            <a href="games/granny.html" class="game-card">
+                <div class="game-icon">👵</div>
+                <div class="game-info">
+                    <div class="game-title">Granny</div>
+                    <div class="game-description">Escape from Granny's house without getting caught!</div>
+                    <button class="play-btn">Play Now</button>
+                </div>
+            </a>
+
+            <a href="games/basketballlegends.html" class="game-card">
+                <div class="game-icon">🏀</div>
+                <div class="game-info">
+                    <div class="game-title">Basketball Legends</div>
+                    <div class="game-description">Play basketball with famous players in this exciting game!</div>
+                    <button class="play-btn">Play Now</button>
+                </div>
+            </a>
+
+            <a href="games/bloxorz.html" class="game-card">
+                <div class="game-icon">🧊</div>
+                <div class="game-info">
+                    <div class="game-title">Bloxorz</div>
+                    <div class="game-description">Roll the block to fit into the hole in this puzzle game!</div>
+                    <button class="play-btn">Play Now</button>
+                </div>
+            </a>
+
+            <a href="games/fruitninja.html" class="game-card">
+                <div class="game-icon">🍉</div>
+                <div class="game-info">
+                    <div class="game-title">Fruit Ninja</div>
+                    <div class="game-description">Slice fruits while avoiding bombs in this action game!</div>
+                    <button class="play-btn">Play Now</button>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
